@@ -1,0 +1,91 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+$brand-color: #486860;
+
+a {
+  &,
+  &:hover,
+  &:visited {
+    color: $brand-color;
+    text-decoration: none;
+  }
+}
+/**
+ * Site header
+ */
+.site-header{
+  border-top: none;
+}
+.site-title {
+  @include relative-font-size(1.625);
+  font-weight: 300;
+  line-height: $base-line-height * $base-font-size * 2.25;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+  .site-header-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+}
+/**
+ * Site header - home
+ */
+.site-header.home-header {
+  .home-header-wrapper {
+    text-align: center;
+    padding: 24px 0;
+  }
+  .home-header-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .home-header-title {
+    margin: 8px 0 0 0;
+    font-size: 1.4em;
+  }
+  .home-header-desc {
+    margin: 4px 0 0 0;
+    color: $grey-color;
+    font-size: 0.8em;
+  }
+}
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+  text-align: center;
+}
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+  .svg-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .username {
+    display: none;
+  }
+}
+
+/**
+ * Home posts
+ */
+.post-list-item{
+  margin: 16px 0 0 0;
+  padding: 16px 24px;
+  box-shadow: 0 2px 6px rgba($color: $grey-color, $alpha: 0.3);
+}
